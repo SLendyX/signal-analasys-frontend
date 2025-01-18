@@ -11,7 +11,7 @@ body{
     background-color: #121212;
 }
 
-input{
+input, textarea{
     color: inherit;
     font-size: 1rem;
     border: none;
@@ -20,7 +20,7 @@ input{
     font-family: inherit;
 }
 
-input, input:focus, input:active{
+input, input:focus, input:active, textarea{
     background-color: #555353;
 }
 

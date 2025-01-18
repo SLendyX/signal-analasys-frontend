@@ -10,8 +10,9 @@ async function analyzeSignal() {
         
     }
   //  https://signal-analasys-ff08050bb06d.herokuapp.com/analyze
+    const {value: signal} = document.getElementById("signal")
+
     const [
-        {value: signal}, 
         {value: fs},
         {value: samples}, 
         {value: cutoff}, 
