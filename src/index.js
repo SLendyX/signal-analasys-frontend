@@ -1,7 +1,6 @@
 async function analyzeSignal() {
     const style = 
     { 
-        title: 'Time-Domain Signals',
         paper_bgcolor: "#121212", 
         plot_bgcolor: "#121212",
         font: {
@@ -65,7 +64,7 @@ async function analyzeSignal() {
                 width: 2 // Optional: set the line width
             },
         }
-    ], style);
+    ], {title: 'Time-Domain Signals', ...style});
 
     // Plot magnitude spectrum
     Plotly.newPlot('magnitude-spectrum', [
@@ -89,7 +88,7 @@ async function analyzeSignal() {
                 width: 2 
             },
         }
-    ], style);
+    ], {title: 'Magnitude Spectrum', ...style});
 
     // Plot phase spectrum
     Plotly.newPlot('phase-spectrum', [
@@ -113,7 +112,7 @@ async function analyzeSignal() {
                 width: 2 
             },
         }
-    ], style);
+    ], {title: 'Phase Spectrum', ...style});
 }
 
 document.getElementById("analyze-btn").addEventListener("click", analyzeSignal);
