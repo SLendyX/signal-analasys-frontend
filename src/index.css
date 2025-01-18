@@ -24,7 +24,7 @@ input, input:focus, input:active, textarea{
     background-color: #555353;
 }
 
-input::-webkit-input-placeholder{
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder{
     color: #cfcece;
 }
 
