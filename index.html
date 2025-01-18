@@ -3,19 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/index.css">
     <title>Signal Analysis</title>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
 <body>
     <h1>Fourier Signal Analysis</h1>
-    <label>Enter signal</label>
-    <input type="text" id="signal" placeholder="sin(2*pi*50*t)">
+    <form>
+        <label>Enter signal:
+        </label>
+            <input type="text" id="signal" placeholder="sin(2*pi*50*t)">
+        <label>Frequncy:
+        </label>
+            <input type="number" id="frequency" placeholder="1000">
+        <label>Samples:
+        </label>
+            <input type="number" id="samples" placeholder="1000">
+        <label>
+            Cutoff-frequency
+        </label>
+            <input type="number" id="cutoff-frequency" placeholder="70">
+        <label>
+            Noise
+        </label>
+            <input type="text" id="noise" placeholder="100, 150">
+    </form>
+
     <button id="analyze-btn">Analyze</button>
 
-    <div id="time-domain" style="width: 100%; height: 400px;"></div>
-    <div id="magnitude-spectrum" style="width: 100%; height: 400px;"></div>
-    <div id="phase-spectrum" style="width: 100%; height: 400px;"></div>
+    <div class="graph-container" id="time-domain" style="width: 100%; height: 400px;"></div>
+    <div class="graph-container" id="magnitude-spectrum" style="width: 100%; height: 400px;"></div>
+    <div class="graph-container" id="phase-spectrum" style="width: 100%; height: 400px;"></div>
 
     <script src="./src/index.js" type="module"></script>
+
+    
 </body>
 </html>
